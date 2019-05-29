@@ -15,10 +15,16 @@
 # limitations under the License.
 #
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Havoc-OS stuff.
+$(call inherit-product, vendor/havoc/config/common.mk)
 
 $(call inherit-product, device/samsung/kltechn/full_kltechn.mk)
 
+#export
+HAVOC_BUILD_TYPE := Official
+
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.havoc.maintainer=Khalvat
+
 PRODUCT_DEVICE := kltechn
-PRODUCT_NAME := lineage_kltechn
+PRODUCT_NAME := havoc_kltechn
