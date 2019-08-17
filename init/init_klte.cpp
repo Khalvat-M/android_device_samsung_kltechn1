@@ -58,8 +58,8 @@ void init_target_properties()
 
     if (bootloader.find("G9006V") == 0) {
         /* kltezn */
-        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/kltezn/klte:6.0.1/MMB29M/G9006VZNU1CQB1:user/release-keys");
-        property_override("ro.build.description", "kltezn-user 6.0.1 MMB29M G9006VZNU1CQB1 release-keys");
+        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/kltezn/klte:6.0.1/MMB29M/G9006VZNS1CRH1:user/release-keys");
+        property_override("ro.build.description", "kltezn-user 6.0.1 MMB29M G9006VZNS1CRH1 release-keys");
         property_override_dual("ro.product.model", "ro.vendor.product.model", "SM-G9006V");
         property_override_dual("ro.product.device", "ro.vendor.product.device", "klte");
         gsm_properties("9");
