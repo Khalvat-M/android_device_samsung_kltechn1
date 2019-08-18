@@ -24,7 +24,7 @@ $(call inherit-product, device/samsung/kltechn/full_kltechn.mk)
 HAVOC_BUILD_TYPE := Official
 
 PRODUCT_PROPERTY_OVERRIDES += \
-	ro.havoc.maintainer=Khalvat
+	ro.havoc.maintainer=ZCH❤MBA
 
 PRODUCT_DEVICE := kltechn
 PRODUCT_NAME := havoc_kltechn
