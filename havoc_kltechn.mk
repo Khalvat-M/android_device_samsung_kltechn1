@@ -16,7 +16,7 @@
 #
 
 # Inherit some common Havoc-OS stuff.
-$(call inherit-product, vendor/havoc/config/common.mk)
+$(call inherit-product, vendor/havoc/config/common_full_phone.mk)
 
 $(call inherit-product, device/samsung/kltechn/full_kltechn.mk)
 
