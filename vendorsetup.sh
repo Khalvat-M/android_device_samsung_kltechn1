@@ -1,2 +1,0 @@
-add_lunch_combo havoc_kltechn-eng
-add_lunch_combo havoc_kltechn-userdebug
