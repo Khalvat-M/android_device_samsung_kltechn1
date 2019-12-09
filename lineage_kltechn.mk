@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2019 The LineageOS Project
+# Copyright (C) 2019 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,15 +12,12 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
 
-PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/havoc_kltechn.mk \
-    $(LOCAL_DIR)/lineage_kltechn.mk
+# Inherit some common Lineage-CrDroid stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-COMMON_LUNCH_CHOICES := \
-    havoc_kltechn-user \
-    havoc_kltechn-userdebug \
-    havoc_kltechn-eng \
-    lineage_kltechn-user \
-    lineage_kltechn-userdebug \
-    lineage_kltechn-eng
+$(call inherit-product, device/samsung/kltechn/full_kltechn.mk)
+
+PRODUCT_DEVICE := kltechn
+PRODUCT_NAME := lineage_kltechn
