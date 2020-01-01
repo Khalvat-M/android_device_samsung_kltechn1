@@ -1,5 +1,5 @@
-# Copyright (C) 2014-2016 The CyanogenMod Project
-# Copyright (C) 2017-2018 The LineageOS Project
+#
+# Copyright (C) 2020 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,6 +18,8 @@ include device/samsung/klte-common/BoardConfigCommon.mk
 
 TARGET_OTA_ASSERT_DEVICE := klte,kltechn,kltexx,kltezm,kltezn
 
+KLTECHN_PATH := device/samsung/kltechn
+
 # Kernel
 TARGET_KERNEL_CONFIG := lineage_kltechn_defconfig
 
@@ -25,8 +27,8 @@ TARGET_KERNEL_CONFIG := lineage_kltechn_defconfig
 include $(COMMON_PATH)/fingerprint/board.mk
 
 # Init
-TARGET_INIT_VENDOR_LIB := libinit_msm8974
-TARGET_LIBINIT_MSM8974_DEFINES_FILE := device/samsung/kltechn/init/init_klte.cpp
+TARGET_INIT_VENDOR_LIB := //$(KLTECHN_PATH):libinit_kltechn
+TARGET_RECOVERY_DEVICE_MODULES := libinit_kltechn
 
 # NFC
 include $(COMMON_PATH)/nfc/pn547/board.mk
