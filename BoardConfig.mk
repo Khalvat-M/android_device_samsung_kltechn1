@@ -20,6 +20,8 @@ TARGET_OTA_ASSERT_DEVICE := klte,kltechn,kltexx,kltezm,kltezn
 
 KLTECHN_PATH := device/samsung/kltechn
 
+BUILD_FINGERPRINT := samsung/kltezn/klte:6.0.1/MMB29M/G9006VZNS1CRH1:user/release-keys
+
 # Kernel
 TARGET_KERNEL_CONFIG := lineage_kltechn_defconfig
 
