@@ -25,9 +25,6 @@ BUILD_FINGERPRINT := samsung/kltezn/klte:6.0.1/MMB29M/G9006VZNS1CRH1:user/releas
 # Kernel
 TARGET_KERNEL_CONFIG := lineage_kltechn_defconfig
 
-# Fingerprint
-include $(COMMON_PATH)/fingerprint/board.mk
-
 # Init
 TARGET_INIT_VENDOR_LIB := //$(KLTECHN_PATH):libinit_kltechn
 TARGET_RECOVERY_DEVICE_MODULES := libinit_kltechn
