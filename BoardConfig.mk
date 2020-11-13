@@ -13,24 +13,38 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# inherit from common kltechn
-include device/samsung/klte-common/BoardConfig.mk
+# inherit from common
+include device/samsung/msm8974-common/BoardConfig.mk
 
-TARGET_OTA_ASSERT_DEVICE := klte,kltechn,kltexx,kltezm,kltezn
+DEVICE_PATH := device/samsung/kltechn
 
-KLTECHN_PATH := device/samsung/kltechn
+# Bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
+BOARD_CUSTOM_BT_CONFIG := $(DEVICE_PATH)/bluetooth/vnd_klte.txt
+BOARD_HAVE_SAMSUNG_BLUETOOTH := true
 
+# Build Fingerprint
 BUILD_FINGERPRINT := samsung/kltezn/klte:6.0.1/MMB29M/G9006VZNS1CRH1:user/release-keys
 
 # Kernel
 TARGET_KERNEL_CONFIG := lineage_kltechn_defconfig
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(KLTECHN_PATH):libinit_kltechn
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_kltechn
 TARGET_RECOVERY_DEVICE_MODULES := libinit_kltechn
+
+# OTA
+TARGET_OTA_ASSERT_DEVICE := klte,kltechn,kltexx,kltezm,kltezn
+
+# Partition
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2411724800		# Dont change it
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 12507380736	# Dont change it
 
 # NFC
 include $(COMMON_PATH)/nfc/pn547/board.mk
 
 # inherit from the proprietary version
 -include vendor/samsung/kltechn/BoardConfigVendor.mk
+
+# inherit from the proprietary version
+-include vendor/samsung/klte-common/BoardConfigVendor.mk

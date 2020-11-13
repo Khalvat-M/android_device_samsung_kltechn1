@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2019 The LineageOS Project
+# Copyright (C) 2020 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,13 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/havoc_kltechn.mk \
     $(LOCAL_DIR)/lineage_kltechn.mk
 
 COMMON_LUNCH_CHOICES := \
-    havoc_kltechn-user \
-    havoc_kltechn-userdebug \
-    havoc_kltechn-eng \
     lineage_kltechn-user \
     lineage_kltechn-userdebug \
     lineage_kltechn-eng
